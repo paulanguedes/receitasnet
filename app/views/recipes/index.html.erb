@@ -6,8 +6,8 @@
             <h2> <%= link_to recipe.name , recipe %> </h2>
         </header>
         <p> <%= truncate(recipe.stuff, length:15, separator:'') %> </p>
-        <p> 
-            <%= formata_caloria(recipe) %>
+        <p>
+            <%= recipe.calories %>
         </p>
         <table>
             <tr>
