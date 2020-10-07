@@ -3,7 +3,7 @@
 <% @recipes.each do |recipe| %>
     <article>
         <header>
-            <h2> <%= recipe.name %> </h2>
+            <h2> <%= link_to recipe.name , recipe %> </h2>
         </header>
         <p> <%= truncate(recipe.stuff, length:30, separator:'') %> </p>
         <p> 
