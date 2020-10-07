@@ -5,7 +5,7 @@
         <header>
             <h2> <%= link_to recipe.name , recipe %> </h2>
         </header>
-        <p> <%= truncate(recipe.stuff, length:30, separator:'') %> </p>
+        <p> <%= truncate(recipe.stuff, length:15, separator:'') %> </p>
         <p> 
             <%= formata_caloria(recipe) %>
         </p>
@@ -21,5 +21,6 @@
         </table>
     </article>
 <% end %>
+<br>
 
 <%= link_to "Nova receita", new_recipe_path %>
