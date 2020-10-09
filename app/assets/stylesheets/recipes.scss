@@ -31,3 +31,18 @@ footer {
 footer div p {
     color: white;
 }
+div.form-new-recipe {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+div.form-new-recipe div.card div.card-header {
+    background-color: #262625;
+    color: white;
+}
+input.btn.btn-primary {
+    background-color: #8C6A2B;
+    border: none;
+}
+input.btn.btn-primary:hover {
+    background-color: #D99923;
+}
