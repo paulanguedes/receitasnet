@@ -12,6 +12,42 @@ html body nav a img {
     align-items: center;
     justify-content: space-between;
 }
+html body div.container {
+    margin-bottom: 2rem;
+}
+html body div header h1 {
+    margin-top: 2rem;
+    color: #D99923;
+}
+html body div header img {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+html body div.container h2 {
+    margin-top: 1rem;
+}
+html body div.container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+html body div.container button.btn.btn-outline-light {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: grey;
+}
+html body div.container button.btn.btn-outline-light:hover {
+    color: #262625;
+    background-color: #D99923;
+}
+html body div button a img {
+    margin-right: 0.5rem;
+    width: 1.2rem;
+}
 .nova-receita a {
     float: right;
     font-size: 1.2rem;

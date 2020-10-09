@@ -1,4 +1,4 @@
-<article>
+<div class="container">
 
     <header>
         <h1> <%= @recipe.name %> </h1>
@@ -15,7 +15,7 @@
     <p> <%= @recipe.calories %> </p>
 
     <h2>Tempo de preparo</h2>
-    <p> <%= @recipe.duration.to_formatted_s(:time) %> </p> min
+    <p> <%= @recipe.duration.to_formatted_s(:time) %> </p>
 
     <h2>Porções</h2>
     <p> <%= pluralize(@recipe.portion, "porção", "porções") %> </p>
@@ -24,10 +24,23 @@
     <p> <%= @recipe.prepare_mode %> </p>
     
     <h3>Custo</h3>
-    <p> <%= @recipe.cost %> </p>
+    <p>R$ <%= @recipe.cost %> </p>
 
-</article>
+    <div class="buttons">
+        <button type="button" class="btn btn-outline-light">
+            <%= link_to image_tag('repo.svg', alt:'voltar a home') %>
+            home
+        </button>
 
-<%= link_to "Receitas", recipes_path %> <br>
-<%= link_to "Editar receita", edit_recipe_path(@recipe) %> <br>
-<%= link_to "Deletar receita", recipe_path(@recipe), method: :delete, data:{confirm: "Deseja mesmo deletar essa receita?"} %>
+        <button type="button" class="btn btn-outline-light">
+            <%= link_to image_tag('pencil.svg', alt:'editar receita') %>
+            editar
+        </button>
+
+        <button type="button" class="btn btn-outline-light">
+            <%= link_to image_tag('trash.svg', alt:'deletar receita'), recipe_path(@recipe), method: :delete, data:{confirm: "Deseja mesmo deletar essa receita?"} %>
+            deletar
+        </button>
+    </div>
+
+</div>
