@@ -2,29 +2,38 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"> 
-                <%= pluralize(@recipes.size, "Receita", "Receitas") %> 
-                <small> <%= link_to "Nova receita", new_recipe_path %> </small>
+            <h1 class="header"> 
+                <%= pluralize(@recipes.size, "Receita", "Receitas") %> <br>
+                <small class="nova-receita text-lowercase font-weight-light">
+                    <%= link_to "+ Nova receita", new_recipe_path %>
+                </small>
             </h1>
         </div>
     </div>
 
-    <% @recipes.each do |recipe| %>
-        <div class="row">
-            <div class="col-md-12">
-                <%= link_to imagem(recipe), recipe %>
+    
+
+    <div class="container">
+        <% @recipes.each do |recipe| %>
+            <div class="recipe-card row">
+                <div class="col-4">
+                    <%= link_to imagem(recipe), recipe%>
+                </div>
+                <div class="recipe-content col-8">
+                    <h5><%= link_to recipe.name , recipe %></h5>
+                    <p>
+                        <p> <%= truncate(recipe.stuff, length:150, separator:'') %> </p>
+                        <h4> Calorias: </h4>
+                        <p> <%= formata_caloria(recipe) %> </p>
+                        <h4> Tempo de preparo: </h4>
+                        <p> <%= recipe.duration.to_formatted_s(:time) %> </p>
+                        <h4> Custo: </h4>
+                        <p> <%= number_to_currency(recipe.cost) %> </p>
+                    </p>
+                </div>
             </div>
-            <div class="col-md-7">
-                <h3> <%= link_to recipe.name , recipe %> </h3>
-                <p> <%= truncate(recipe.stuff, length:150, separator:'') %> </p>
-                <h4> Calorias: </h4>
-                <p> <%= formata_caloria(recipe) %> </p>
-                <h4> Tempo de preparo: </h4>
-                <p> <%= recipe.duration.to_formatted_s(:time) %> min </p>
-                <h4> Custo: </h4>
-                <p> <%= number_to_currency(recipe.cost) %> </p>
-            </div>
-        </div>
-    <% end %>
+            <hr>
+        <% end %>
+    </div>        
 
 </div>

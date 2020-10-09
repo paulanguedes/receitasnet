@@ -1,3 +1,33 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+html body nav a img {
+    padding-left: 2rem;
+    width: 180px;
+}
+.header {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nova-receita a {
+    float: right;
+    font-size: 1.2rem;
+    color: #262625;
+    text-decoration: none;
+}
+div.container .recipe-card .recipe-content a {
+    color: #D99923;
+    text-decoration: none;
+}
+footer {
+    background-color: #262625;
+    text-align: center;
+    height: 10vh;
+    padding-top: 1rem;
+}
+footer div p {
+    color: white;
+}
