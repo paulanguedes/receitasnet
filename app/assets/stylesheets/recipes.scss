@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 html body nav {
+    background-color: #c2bcbc;
+}
+html body nav.navbar {
     box-shadow: 1px 1px 10px 1px #888888;
 }
 html body nav a img {
@@ -14,6 +17,9 @@ html body nav a img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+html body div.container.alert {
+    margin-top: 2rem;
 }
 html body div.container div.row div h1 small a:hover {
     color: #D99923;
@@ -71,7 +77,9 @@ footer {
     padding-top: 1rem;
 }
 footer div p {
+    margin-top: 1rem;
     color: white;
+    font-size: 1.4rem;
 }
 div.form-new-recipe {
     margin-top: 1rem;

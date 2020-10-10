@@ -15,11 +15,10 @@ class RecipesController < ApplicationController
     def update
         @recipe = Recipe.find(params[:id])
         if @recipe.update(recipe_params)
-            redirect_to @recipe
+            redirect_to @recipe, notice:"Sua receita foi editada."
         else
             render :edit
         end
-        redirect_to @recipe
     end
 
     def new
@@ -29,17 +28,16 @@ class RecipesController < ApplicationController
     def create
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
-            redirect_to @recipe
+            redirect_to @recipe, notice:"Sua receita foi criada com sucesso."
         else
             render :new
         end
-        
     end
     
     def destroy
         @recipe = Recipe.find(params[:id])
         @recipe.destroy
-        redirect_to recipes_url
+        redirect_to recipes_url, alert:"Receita excluída :("
     end
 
     private 
