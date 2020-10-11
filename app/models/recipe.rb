@@ -9,10 +9,11 @@ class Recipe < ActiveRecord::Base
     KIND = %w(Carnes Aves Peixes Massas Saladas Doces)
     validates_inclusion_of :kind, in: KIND
 
+    has_many :comments, dependent: :destroy
+
     def light?
         calories.blank? || calories < 100
     end
-
 
     def self.created_at
         where("created_at <= ?", Time.now).order("created_at desc")

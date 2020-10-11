@@ -224,3 +224,24 @@ Recipe.create!([
         poster: "Torta-madalena.jpg"
     }
 ])
+
+receita = Recipe.find_by(name: "Fettuccine alfredo")
+receita.comments.create!(name:"André Franklin", rating:5 , comment:"Não é tão fácil acertar o ponto do molho")
+
+receita = Recipe.find_by(name: "Paillard de frango à milanesa")
+receita.comments.create!(name:"Fernanda Nogueira", rating:9 , comment:"Muito fácil e rápido")
+
+receita = Recipe.find_by(name: "Salada de grãos")
+receita.comments.create!(name:"Fernando Benaglia", rating:10 , comment:"Leve e fácil. Ideal para receber os amigos")
+receita.comments.create!(name:"Aline Colleoni", rating:7 , comment:"Não é tão gostoso assim")
+
+receita = Recipe.find_by(name: "Papilote de salmão com legumes")
+receita.comments.create!(name:"Ana Eduarda", rating:9 , comment:"É muito fácil acertar o ponto do salmão com essa técnica")
+
+receita = Recipe.find_by(name: "Strogonoff de frango")
+receita.comments.create!(name:"Manuela Amorim", rating:10 , comment:"Um dos meus favoritos!")
+receita.comments.create!(name:"Mayara Paes", rating:6 , comment:"Gosto mais do de carne mesmo.")
+
+receita = Recipe.find_by(name: "Torta Madalena")
+receita.comments.create!(name:"Leo Bermudez", rating:10 , comment:"Delicioso e dentro da minha dieta.")
+receita.comments.create!(name:"Juliana Manucelli", rating:10 , comment:"Segui direitinho a receita e deu tudo certo =)")
