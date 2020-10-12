@@ -1,8 +1,8 @@
-<% if @recipe.errors.any? %>
+<% if object.errors.any? %>
 
     <div class="alert alert-secondary" role="alert">
         <ul>
-            <%= @recipe.errors.full_messages.each do |message| %>
+            <%= object.errors.full_messages.each do |message| %>
                 <li> <%= message %> </li>
             <% end %>
         </ul>

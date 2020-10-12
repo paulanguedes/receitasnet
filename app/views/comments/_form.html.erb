@@ -1,5 +1,7 @@
 <%= form_for([@recipe, @comment]) do |f| %>
 
+    <%= render 'layouts/errors', object: @comment %>
+
     <p class="form-group">
         <%= f.label :Nome %> <br>
         <%= f.text_field :name, autofocus:true, class:"form-control" %>
