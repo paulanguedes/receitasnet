@@ -7,7 +7,7 @@ Recipe.create!([
         ⅔ de xícara (chá) de queijo parmesão ralado e 
         sal a gosto",
         calories: 290,
-        kind: "Massa",
+        kind: "Massas",
         prepare_mode: "Numa panela grande, coloque 3 litros de água e 1 colher (sopa) de sal. 
         Leve ao fogo alto. Quando a água ferver, coloque o macarrão e deixe cozinhar conforme 
         as instruções da embalagem. Cuidado para não deixar o macarrão cozinhar demais, 
@@ -225,23 +225,23 @@ Recipe.create!([
     }
 ])
 
-receita = Recipe.find_by(name: "Fettuccine alfredo")
-receita.comments.create!(name:"André Franklin", rating:5 , comment:"Não é tão fácil acertar o ponto do molho")
+receita = Recipe.find_by(name:"Torta Madalena")
+receita.comments.create!(name:"André Franklin", rating:4 , comment:"Não é tão rápido, mas vale a pena se estiver com tempo")
 
-receita = Recipe.find_by(name: "Paillard de frango à milanesa")
-receita.comments.create!(name:"Fernanda Nogueira", rating:9 , comment:"Muito fácil e rápido")
+receita = Recipe.find_by(name:"Fettuccine alfredo")
+receita.comments.create!(name:"Fernanda Nogueira", rating:5 , comment:"Muito fácil e rápido")
 
-receita = Recipe.find_by(name: "Salada de grãos")
-receita.comments.create!(name:"Fernando Benaglia", rating:10 , comment:"Leve e fácil. Ideal para receber os amigos")
-receita.comments.create!(name:"Aline Colleoni", rating:7 , comment:"Não é tão gostoso assim")
+receita = Recipe.find_by(name:"Paillard de frango à milanesa")
+receita.comments.create!(name:"Fernando Benaglia", rating:5 , comment:"Leve e fácil. Ideal para receber os amigos")
+receita.comments.create!(name:"Aline Colleoni", rating:3 , comment:"Não é tão gostoso assim")
 
-receita = Recipe.find_by(name: "Papilote de salmão com legumes")
-receita.comments.create!(name:"Ana Eduarda", rating:9 , comment:"É muito fácil acertar o ponto do salmão com essa técnica")
+receita = Recipe.find_by(name:"Papilote de salmão com legumes")
+receita.comments.create!(name:"Ana Eduarda", rating:5 , comment:"É muito fácil acertar o ponto do salmão com essa técnica")
 
-receita = Recipe.find_by(name: "Strogonoff de frango")
-receita.comments.create!(name:"Manuela Amorim", rating:10 , comment:"Um dos meus favoritos!")
-receita.comments.create!(name:"Mayara Paes", rating:6 , comment:"Gosto mais do de carne mesmo.")
+receita = Recipe.find_by(name:"Strogonoff de frango")
+receita.comments.create!(name:"Manuela Amorim", rating:5 , comment:"Um dos meus favoritos!")
+receita.comments.create!(name:"Mayara Paes", rating:2 , comment:"Gosto mais do de carne mesmo.")
 
-receita = Recipe.find_by(name: "Torta Madalena")
-receita.comments.create!(name:"Leo Bermudez", rating:10 , comment:"Delicioso e dentro da minha dieta.")
-receita.comments.create!(name:"Juliana Manucelli", rating:10 , comment:"Segui direitinho a receita e deu tudo certo =)")
+receita = Recipe.find_by(name:"Salada de grãos")
+receita.comments.create!(name:"Leo Bermudez", rating:5 , comment:"Delicioso e dentro da minha dieta.")
+receita.comments.create!(name:"Juliana Manucelli", rating:5 , comment:"Segui direitinho a receita e deu tudo certo =)")

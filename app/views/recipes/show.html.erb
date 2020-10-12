@@ -24,7 +24,10 @@
     <p> <%= @recipe.prepare_mode %> </p>
     
     <h3>Custo</h3>
-    <p>R$ <%= @recipe.cost %> </p>
+    <p> <%= number_to_currency(@recipe.cost) %> </p>
+
+    <h3>Avaliações</h3>
+    <%= link_to pluralize(@recipe.comments.size, "avaliação", "avaliações"), recipe_comments_path(@recipe) %>
 
     <div class="buttons">
         <button type="button" class="btn btn-outline-light">

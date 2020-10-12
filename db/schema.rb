@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_10_10_235356) do
     t.string "name"
     t.integer "rating"
     t.text "comment"
-    t.integer "recipe_id", null: false
+    t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipe_id"], name: "index_comments_on_recipe_id"

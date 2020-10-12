@@ -4,9 +4,9 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :rating
       t.text :comment
-      t.references :recipe, null: false, foreign_key: true
+      t.references :recipe, index: true, foreign_key: true
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

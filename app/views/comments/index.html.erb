@@ -1,0 +1,28 @@
+<div class="jumbotron container">
+    <div class="comments-container container">
+        <% if @recipe.comments.size > 0 %>
+            <ul>
+                <% @comments.each do |comment| %>
+                <li>
+                    <p class="lead">
+                        <%= comment.name %> 
+                        <small class="small_font_rating"> <br> <%= pluralize(comment.rating, "estrela", "estrelas") %> </small>
+                        <small class="small_font"> - escrito há <%= time_ago_in_words(comment.created_at) %> </small>
+                    </p>
+                    <p class="display-4">"<%= comment.comment %>"</p>
+                </li>
+                <% end %>
+            </ul>
+        <% else %>
+            <p class="text-center">
+                Essa receita ainda não tem avaliações <br> &#128543
+            </p>
+        <% end %>
+    </div>
+
+    <button type="button" class="btn btn-outline-light">
+        <%= link_to image_tag('repo.svg', alt:'voltar a home'), recipes_path %>
+        home
+    </button>
+
+</div>
