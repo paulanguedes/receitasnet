@@ -18,14 +18,14 @@ html body nav a img {
     align-items: center;
     justify-content: space-between;
 }
+div.container {
+    margin-bottom: 16vh;
+}
 html body div.container.alert {
     margin-top: 2rem;
 }
 html body div.container div.row div h1 small a:hover {
     color: #D99923;
-}
-html body div.container {
-    margin-bottom: 10rem;
 }
 html body div header h1 {
     margin-top: 2rem;
@@ -51,10 +51,12 @@ html body div.container button.btn.btn-outline-light {
     padding: 0.5rem;
     font-size: 1rem;
     color: grey;
+    border: 1px solid #f2f2f2;
 }
 html body div.container button.btn.btn-outline-light:hover {
     color: #262625;
     background-color: #D99923;
+    border: none;
 }
 html body div button a img {
     margin-right: 0.5rem;
@@ -99,12 +101,14 @@ input.btn.btn-primary {
 input.btn.btn-primary:hover {
     background-color: #D99923;
 }
+// bloco de comentários na view comments
 div.jumbotron div.comments-container {
     background-color: #f2f2f2;
     border-radius: 6px;
     border: 1px #99999997 solid;
     box-shadow: #888888 2px 2px 4px;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 1rem;
 }
 div.jumbotron div.comments-container ul {
@@ -127,4 +131,44 @@ div.jumbotron div.comments-container p.display-4 {
     font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 2rem;
+}
+div.jumbotron.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.jumbotron.container button.btn.btn-outline-light {
+    align-self: center;
+}
+// botões de avaliações na view show
+div.container div.avaliar {
+    margin-bottom: 2rem;
+}
+div.container div.avaliar a {
+    text-decoration: none;
+    color: #8C6A2B;
+    font-size: 1.2rem;
+}
+div.container div.avaliar a.btn.btn-primary {
+    margin-top: 1rem;
+    color: #262625;
+    background-color: #8C6A2B;
+    border: none;
+}
+div.container div.avaliar a.btn.btn-primary:hover {
+    color: #f2f2f2;
+    background-color: #D99923;
+}
+// card de novo comentário
+div.container div.novo-comentario.card {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+}
+div.container div.novo-comentario.card label {
+    margin-bottom: 1rem;
+}
+div.container div.novo-comentario.card select#comment_rating {
+    padding: 0.6rem;
+    color: grey;
 }
