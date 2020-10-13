@@ -53,10 +53,11 @@ Pronto!:ok_hand:
 ## Autoria
 Feito por **Paula N Guedes**
 <paulanguedes@gmail.com>
+
 [GitHub](https://github.com/paulanguedes/)
+
 [LinkedIn](https://www.linkedin.com/in/paulanguedes/)
 
-### Baseado no curso...
-online da Codifike no [Youtube](https://www.youtube.com/watch?v=2SEKJdKzwNU&list=PLFeyfVYazTkJN6uM5opCfSN_xjxrMybXV&index=1).
+###### Baseado no curso online da Codifike no [Youtube](https://www.youtube.com/watch?v=2SEKJdKzwNU&list=PLFeyfVYazTkJN6uM5opCfSN_xjxrMybXV&index=1).
 
 ![Alt Text](https://media.giphy.com/media/3o6fJcIm2vBlsWvKdW/giphy.gif)
