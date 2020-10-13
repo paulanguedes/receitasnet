@@ -38,7 +38,9 @@ Instale todas as gems que o projeto precisa:
 
 Depois você precisa criar o banco de dados, rodar as migrations e a seeder para popular a aplicação:
 >`rake db:create`
+
 >`rake db:migrate`
+
 >`rake db:seed`
 
 Inicie o servidor rails no terminal:
@@ -56,3 +58,5 @@ Feito por **Paula N Guedes**
 
 ### Baseado no curso...
 online da Codifike no [Youtube](https://www.youtube.com/watch?v=2SEKJdKzwNU&list=PLFeyfVYazTkJN6uM5opCfSN_xjxrMybXV&index=1).
+
+![Alt Text](https://media.giphy.com/media/3o6fJcIm2vBlsWvKdW/giphy.gif)
