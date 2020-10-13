@@ -52,6 +52,7 @@ Pronto!:ok_hand:
 
 ## Autoria
 Feito por **Paula N Guedes**
+
 <paulanguedes@gmail.com>
 
 [GitHub](https://github.com/paulanguedes/)
