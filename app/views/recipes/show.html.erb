@@ -34,19 +34,17 @@
     </div>
 
     <div class="buttons">
-        <button type="button" class="btn btn-outline-light">
+
+        <button type="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="auto" title="ver receitas">
             <%= link_to image_tag('repo.svg', alt:'voltar a home'), recipes_path %>
-            home
         </button>
 
-        <button type="button" class="btn btn-outline-light">
+        <button type="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="auto" title="editar">
             <%= link_to image_tag('pencil.svg', alt:'editar receita'), edit_recipe_path(@recipe) %>
-            editar
         </button>
 
-        <button type="button" class="btn btn-outline-light">
+        <button type="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="auto" title="deletar">
             <%= link_to image_tag('trash.svg', alt:'deletar receita'), recipe_path(@recipe), method: :delete, data:{confirm: "Deseja mesmo deletar essa receita?"} %>
-            deletar
         </button>
     </div>
 

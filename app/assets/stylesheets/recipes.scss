@@ -1,106 +1,176 @@
-// Place all the styles related to the recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 
-html body nav {
-    background-color: #c2bcbc;
+// ===== GERAL =====
+// colors
+$primary-color: #3b3b3a;
+$primary-color-darker: #0D0D0D;
+$secondary-color: #D99923;
+$secondary-color-darker: #8C6A2B;
+$bg-color: #F2F2F2;
+
+* {
+    color: $primary-color;
 }
-html body nav.navbar {
+div.container {
+    padding: 0;
+    margin-bottom: 16vh;
+}
+// alertas
+div.container.alert {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+// ===== NAVBAR =====
+nav.bg-light {
+    background-color: $bg-color !important;
+}
+nav.navbar {
     box-shadow: 1px 1px 10px 1px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-html body nav a img {
-    padding-left: 2rem;
-    width: 180px;
+nav.navbar a img {
+    width: 12vw;
+}nav.navbar p {
+    color: $secondary-color-darker;
+    opacity: 0.5;
 }
-.header {
-    margin: 2rem 0;
+
+// ===== INDEX receitas =====
+h2.main.header {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-div.container {
+h2.main.header small.nova-receita a {
+    font-size: 1.2rem;
+    color: $primary-color;
+    text-decoration: none;
+}
+h2.main.header small a:hover {
+    color: $secondary-color;
+}
+div.main.container hr {
+    margin-bottom: 3vh;
+}
+div.main.container hr:last-child {
+    visibility: hidden;
+}
+div.main.container div.recipe-card h4 {
+    font-size: 1.2rem;
+}
+div.main.container div.recipe-card a {
+    color: $secondary-color;
+    text-decoration: none;
+}
+div.main.container div.recipe-card a:hover {
+    color: $secondary-color-darker;
+}
+
+// ===== SHOW =====
+div.show-container.container {
+    margin-top: 2vh;
     margin-bottom: 16vh;
 }
-html body div.container.alert {
-    margin-top: 2rem;
+div.show-container.container header {
+    text-align: center;
 }
-html body div.container div.row div h1 small a:hover {
-    color: #D99923;
+div.show-container.container header img {
+    width: auto;
+    margin-bottom: 3vh;
 }
-html body div header h1 {
-    margin-top: 2rem;
-    color: #D99923;
+div.show-container.container h2 {
+    font-size: 1.4rem;
 }
-html body div header img {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+div.show-container.container h3 {
+    font-size: 1.3rem;
 }
-html body div.container h2 {
-    margin-top: 1rem;
+// botões
+div.show-container div.buttons a img {
+    width: 1.4rem;
 }
-html body div.container div.buttons {
+div.show-container div.buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-html body div.container button.btn.btn-outline-light {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: grey;
-    border: 1px solid #f2f2f2;
+div.show-container div.buttons button {
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    background-color: $bg-color;
 }
-html body div.container button.btn.btn-outline-light:hover {
-    color: #262625;
-    background-color: #D99923;
+div.show-container div.buttons button:hover {
+    background-color: $secondary-color;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+// avaliar
+div.show-container div.avaliar {
+    margin-bottom: 2rem;
+}
+div.show-container div.avaliar a {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 1.2rem;
+}
+div.show-container div.avaliar a:hover {
+    color: $secondary-color;
+    text-shadow: 0.4px 0.4px 0.4px #888888;
+}
+div.show-container div.avaliar a.btn.btn-primary {
+    margin-top: 1rem;
+    color: $bg-color;
+    background-color: $primary-color-darker;
     border: none;
 }
-html body div button a img {
-    margin-right: 0.5rem;
-    width: 1.2rem;
+div.show-container div.avaliar a.btn.btn-primary:hover {
+    background-color: $secondary-color-darker;
+    box-shadow: 1px 1px 1px 1px #888888;
 }
-.nova-receita a {
-    float: right;
-    font-size: 1.2rem;
-    color: #262625;
-    text-decoration: none;
-}
-div.container .recipe-card .recipe-content a {
-    color: #D99923;
-    text-decoration: none;
-}
-footer {
-    background-color: #262625;
-    text-align: center;
-    height: 10vh;
-    padding-top: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer div p {
-    margin-top: 1rem;
-    color: white;
-    font-size: 1.4rem;
-}
+
+// ===== CREATE / EDIT =====
 div.form-new-recipe {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+div.form-new-recipe h2 {
+    color: $bg-color;
+    margin: 0;
+    padding: 0.6rem;
 }
 div.form-new-recipe div.card div.card-header {
-    background-color: #262625;
-    color: white;
+    background-color: $primary-color-darker;
+    color: $bg-color;
 }
-input.btn.btn-primary {
-    background-color: #8C6A2B;
+div.form-new-recipe div.card div.card-header h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+div.form-new-recipe input.btn.btn-primary {
+    background-color: $secondary-color-darker;
     border: none;
 }
-input.btn.btn-primary:hover {
-    background-color: #D99923;
+div.form-new-recipe input.btn.btn-primary:hover {
+    background-color: $secondary-color;
 }
+div.form-new-recipe a.btn.btn-light {
+    background-color: $bg-color;
+    color: #888888 !important;
+}
+div.form-new-recipe a.btn.btn-light:hover {
+    background-color: #888888;
+    color: white !important;
+}
+
+// ===== AVALIAÇÕES =====
 // bloco de comentários na view comments
 div.jumbotron div.comments-container {
     background-color: #f2f2f2;
@@ -137,33 +207,24 @@ div.jumbotron.container {
     flex-direction: column;
     justify-content: center;
 }
-div.jumbotron.container button.btn.btn-outline-light {
+// botão
+div.jumbotron.container button {
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    background-color: $bg-color;
     align-self: center;
 }
-// botões de avaliações na view show
-div.container div.avaliar {
-    margin-bottom: 2rem;
-}
-div.container div.avaliar a {
-    text-decoration: none;
-    color: #8C6A2B;
-    font-size: 1.2rem;
-}
-div.container div.avaliar a.btn.btn-primary {
-    margin-top: 1rem;
-    color: #262625;
-    background-color: #8C6A2B;
-    border: none;
-}
-div.container div.avaliar a.btn.btn-primary:hover {
-    color: #f2f2f2;
-    background-color: #D99923;
+div.jumbotron.container button:hover {
+    background-color: $secondary-color;
+    box-shadow: 1px 1px 1px 1px #888888;
 }
 // card de novo comentário
 div.container div.novo-comentario.card {
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px #888888;
 }
 div.container div.novo-comentario.card label {
     margin-bottom: 1rem;
@@ -171,4 +232,35 @@ div.container div.novo-comentario.card label {
 div.container div.novo-comentario.card select#comment_rating {
     padding: 0.6rem;
     color: grey;
+}
+form.new_comment input.btn.btn-primary {
+    background-color: $secondary-color-darker;
+    border: none;
+}
+form.new_comment input.btn.btn-primary:hover {
+    background-color: $secondary-color;
+}
+form.new_comment a.btn.btn-default {
+    background-color: $bg-color;
+    color: #888888 !important;
+}
+form.new_comment a.btn.btn-default:hover {
+    background-color: #888888;
+    color: white !important;
+}
+
+// ===== FOOTER =====
+footer {
+    background-color: #262625;
+    text-align: center;
+    height: 10vh;
+    padding-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer div p {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.4rem;
 }
