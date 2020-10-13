@@ -1,24 +1,23 @@
-# README
+![Love Cooking! Seu livro de receitas online.](app/assets/images/logo.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# :heart: Love Cooking :heart:
+Esse é o meu primeiro projeto com Ruby on Rails. É um site de receitas baseado em um curso online (as referências estão no final).
 
-Things you may want to cover:
+## Demonstração
+Você pode ver uma demonstração dessa aplicação no [Heroku](https://receitasnet-paulaguedes.herokuapp.com/recipes).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Funcionalidades
+- [x] Exibição do número de receitas salvas na aplicação
+- [x] Exibição de receitas das mais novas para mais antigas
+- [x] Cadastro de novas receitas
+- [ ] Inclusão de imagens no banco de dados
+- [x] Edição das receitas
+- [ ] Alteração das imagens nas receitas
+- [x] Exclusão das receitas
+- [x] Página com detalhes de cada receita e contagem de quantas avaliações possui
+- [x] Inserção de uma avaliação da receita com comentário
+- [x] Página de visualização dos comentários feitos
+- [ ] Remoção de comentários
+ 
+ ## Como rodar a aplicação
+ 
